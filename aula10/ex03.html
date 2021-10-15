@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício de Soma</title>
+    <style>
+        body {
+            font: normal 15pt arial;
+            text-align: center;
+        }
+        h2 {
+            color: blue;
+        }
+        input#txtn1 {
+            font: normal 13pt arial;
+            width: 70px;
+            color: black;
+    }
+        input#txtn2 {
+            font: normal 13pt arial;
+            width: 70px;
+            color: black;
+        }
+        div#res {
+            align-items: center;
+            color: rgb(255, 255, 147);
+            text-align: center;
+            margin-top: 20px;
+            background-color: black;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Realize uma operação</h1>
+    <h2>Informe os valores</h2>
+    <input type="text" name="txtn1" id="txtn1"> 
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="+" id="soma">
+    <input type="button" value="-" id="tira">
+    <input type="button" value="x" id="vez">
+    <input type="button" value="/" id="dividi">
+    <div id="res"></div>
+
+    <script>
+        var tn1 = document.getElementById('txtn1')
+        var tn2 = document.getElementById('txtn2')
+        var res = document.getElementById('res')
+        var soma = document.getElementById('soma')
+        soma.addEventListener('click', mais)
+        var tira = document.getElementById('tira')
+        tira.addEventListener('click', menos)
+        var vez = document.getElementById('vez')
+        vez.addEventListener('click', vezes)
+        var dividi = document.getElementById('dividi')
+        dividi.addEventListener('click', dividir)
+        
+        function mais() {
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 + n2
+            res.innerText = `O resultado de ${n1} + ${n2} é: ${s}`
+        }
+
+        function menos(){
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 - n2
+            res.innerText = `O resultado de ${n1} - ${n2} é: ${s}`
+        }
+        
+        function vezes() {
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 * n2
+            res.innerText = `O resultado de ${n1} x ${n2} é: ${s}`
+        }
+
+        function dividir(){
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var s = n1 / n2
+            res.innerHTML = `O resultado de ${n1} / ${n2} é: <strong>${s}</strong>`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício JS</title>
+    <style>
+        body {
+            text-align: center;
+            background: rgb(68, 77, 77);
+            color: white;
+            font: normal 16pt arial            
+        }
+        p.inst {
+            margin-bottom: 0mm;
+            text-align: center;
+        }
+        p.obs {
+            font-size: small;
+            color: rgb(233, 183, 175);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Aulas praticas de JavaScript</h1>
+    <p class="inst">Informe seu nível de satisfação com o curso:</p>
+    <p class="obs">(considere 1 como insatisfeito e 5 como muito satisfeito)</p>
+
+    <input type="button" value="1"  id="1">
+    <input type="button" value="2"  id="2">
+    <input type="button" value="3"  id="3">
+    <input type="button" value="4"  id="4">
+    <input type="button" value="5"  id="5">
+    <div id="res"></div>
+
+    <script>
+        var um = document.getElementById('1')
+        um.addEventListener('click', n1)
+        var dois = document.getElementById('2')
+        dois.addEventListener('click', n2)
+        var tres = document.getElementById('3')
+        tres.addEventListener('click', n3)
+        var quatro = document.getElementById('4')
+        quatro.addEventListener('click', n4)
+        var cinco = document.getElementById('5')
+        cinco.addEventListener('click', n5)
+
+        // variavel r recebe a div res que mostrara o resultado
+        var r = document.getElementById('res')
+
+
+        function n1() {
+            r.innerText = 'Insatisfeito'
+            r.style.color = 'brown'
+            r.style.fontSize = '20pt'
+        }
+        function n2() {
+            r.innerText = 'Pouco satisfeito'
+            r.style.color = 'silver'
+            r.style.fontSize = '25pt'
+        }
+        function n3() {
+            r.innerText = 'Satisfeito, mas tem campo para melhora'
+            r.style.color = 'pink'
+            r.style.fontSize = '20pt'
+        }
+        function n4() {
+            r.innerText = 'Satisfeito!'
+            r.style.color = 'yellow'
+            r.style.fontSize = '40pt'
+        }
+        function n5() {
+            r.innerText = 'Muito satisfeito!!!'
+            r.style.color = 'red'
+            r.style.fontSize = '60pt'
+        }
+
+        
+        /*    
+        var dois = document.getElementById('2')
+            dois.innerText = 'Não muito satisfeito'
+            var tres = document.getElementById('3')
+            tres.innerText = 'Satisfeito, mas dá para melhorar'
+            var quatro = document.getElementById('4')
+            quatro.innerText = 'Satisfeito'
+            var cinco = document.getElementById('5')
+            cinco.innerText = 'Muito satisfeito'
+        */
+    </script>
+</body>
+</html>

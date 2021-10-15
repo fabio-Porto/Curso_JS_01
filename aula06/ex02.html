@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Primeiro Programa</title>
+    <style>
+        body {
+            background-color: rgb(247, 211, 167);
+            color: rgb(187, 94, 28);/*comentario css*/
+            font: normal 25px arial;
+        }
+        h1 {
+            color: rgb(216, 113, 113);
+        }
+    </style>
+</head>
+<body>
+  <h1>Começando a programar</h1> <!--comentario html-->
+  <p>Meu primeiro programa</p>
+  <script>
+      var n1 = Number(window.prompt('Digite um numero: '))//parseInt - transforma o q o window.prompt recebe como string e transforma em number
+      var n2 = Number(window.prompt('Digite outro numero: '))//para a conversao ser feita para Real, usa-se o comando parseFloat; apenas Number(n) permite o programa aceitar numeros inteiros e reais
+      var s = n1 + n2
+      window.alert(`A soma entre ${n1} e ${n2} é: ${s}`)//o comando String() converte para String; a forma apresentada aqui é uma alternativa à concatenação, chamada Template String - ${}
+  </script>
+</body>
+</html>
